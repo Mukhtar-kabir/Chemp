@@ -1,0 +1,136 @@
+.login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100dvb;
+  // background-color: #fafafa;
+  border-image: fill 0 linear-gradient(#b74900, #000);
+  font-family: "Inter", sans-serif;
+  position: relative;
+
+  .container {
+    border: 1px solid #ddd;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+
+    h1 {
+      font-family: sans-serif;
+      margin-bottom: 3rem;
+      text-align: center;
+    }
+
+    .details {
+      margin-bottom: 2rem;
+      line-height: 1.8;
+
+      h3 {
+        font-family: sans-serif;
+        font-weight: 500;
+      }
+
+      input {
+        border: none;
+        background: #ddd;
+        padding: 5px;
+        border-radius: 3px;
+        outline-color: #7070e9;
+        width: 100%;
+      }
+    }
+
+    .button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1rem;
+
+      button {
+        border: none;
+        background-color: #7070e9;
+        color: #fafafa;
+        padding: 0.5rem 5rem;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1rem;
+
+        &:hover {
+          background-color: #5151d3;
+        }
+      }
+    }
+
+    .sign {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+
+      .google {
+        display: flex;
+        align-items: center;
+        border: 1px solid #ddd;
+        border-radius: 3px;
+        width: fit-content;
+        padding: 0 0.5rem;
+        cursor: pointer;
+
+        &:hover {
+          box-shadow: 2px 2px 1px #ddd;
+        }
+
+        p {
+          font-family: sans-serif;
+          color: #ddd;
+        }
+
+        img {
+          width: 2rem;
+          height: 2rem;
+        }
+      }
+
+      button {
+        border: none;
+        background-color: #000;
+        color: #fafafa;
+        padding: 0.5rem 2rem;
+        border-radius: 5px;
+        cursor: pointer;
+
+        &:hover {
+          background-color: #000000e5;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 900px) {
+    .container {
+      width: 85%;
+
+      h1 {
+        font-size: 1.5rem;
+      }
+
+      .button {
+        button {
+          padding: 0.5rem 3rem;
+        }
+      }
+
+      .sign {
+        display: block;
+
+        .google {
+          width: 100%;
+          padding: 0;
+          justify-content: center;
+          margin-bottom: 0.5rem;
+        }
+
+        button {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
