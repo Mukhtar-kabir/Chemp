@@ -1,8 +1,10 @@
+// chempSlice.js
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   userInfo: null,
-  cars: [],
+  getCarsData: [],
+  // isLoading: false,
 };
 
 export const chempSlice = createSlice({
@@ -24,6 +26,10 @@ export const chempSlice = createSlice({
     setCars: (state, action) => {
       state.cars = action.payload;
     },
+
+    // setLoading: (state, action) => {
+    //   state.isLoading = action.payload;
+    // },
   },
 });
 

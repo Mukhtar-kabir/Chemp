@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { carsData } from "../../api/Api";
+import { getCarsData } from "../../api/Api";
 import { setCars } from "../../redux/chempSlice";
 
 import "../Cars/Cars.scss";
@@ -12,11 +12,15 @@ const Cars = () => {
   useEffect(() => {
     const fetchCars = async () => {
       try {
-        const response = await carsData();
-        console.log(response);
-        // dispatch(setCars(response.data));
+        // dispatch(setLoading(true));
+
+        const response = await getCarsData();
+        dispatch(setCars(response));
+
+        // dispatch(setLoading(false));
       } catch (error) {
         console.error("Error fetching car data:", error);
+        // dispatch(setLoading(false));
       }
     };
 
