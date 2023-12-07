@@ -7,25 +7,21 @@ import "../Cars/Cars.scss";
 
 const Cars = () => {
   const dispatch = useDispatch();
-  const cars = useSelector((state) => state.chemp.cars);
+  const cars = useSelector((state) => state.chemp.getCarsData);
 
   useEffect(() => {
-    const fetchCars = async () => {
+    const fetchCarsData = async () => {
       try {
-        // dispatch(setLoading(true));
-
-        const response = await getCarsData();
-        dispatch(setCars(response));
-
-        // dispatch(setLoading(false));
+        const data = await getCarsData();
+        console.log(data);
+        dispatch(setCars(data));
       } catch (error) {
         console.error("Error fetching car data:", error);
-        // dispatch(setLoading(false));
       }
     };
 
-    fetchCars();
-  }, [dispatch]);
+    fetchCarsData();
+  }, []);
 
   return (
     <div>
