@@ -4,6 +4,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
   userInfo: null,
   getCarsData: [],
+  generateCarImageUrl: [],
 };
 
 export const chempSlice = createSlice({
@@ -25,8 +26,13 @@ export const chempSlice = createSlice({
     setCars: (state, action) => {
       state.getCarsData = action.payload;
     },
+
+    setGenerateCars: (state, action) => {
+      state.generateCarImageUrl = action.payload;
+    },
   },
 });
 
-export const { addUser, removeUser, setCars } = chempSlice.actions;
+export const { addUser, removeUser, setCars, setGenerateCars } =
+  chempSlice.actions;
 export default chempSlice.reducer;

@@ -1,0 +1,22 @@
+.partners {
+  padding: 100px 0;
+  width: 80%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .partners-container {
+    display: flex;
+    gap: 5rem;
+
+    img {
+      width: 5rem;
+    }
+  }
+}
+@media (max-width: 900px) {
+  .partners-container {
+    flex-direction: column;
+  }
+}

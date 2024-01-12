@@ -1,3 +1,18 @@
+.container {
+  position: relative;
+
+  // .owl-carousel-container::before {
+  //   content: "";
+  //   position: absolute;
+  //   inset: 0;
+  //   left: 30%;
+  //   background-color: orange;
+  //   background-color: rgba(255, 184, 52, 0.523);
+  //   z-index: 3;
+  //   clip-path: polygon(39% 0, 100% 0, 100% 100%, 0 100%);
+  // }
+}
+
 .owl-carousel {
   .item {
     position: relative;
