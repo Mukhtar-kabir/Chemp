@@ -18,7 +18,7 @@ const Login = () => {
   const provider = new GoogleAuthProvider();
 
   const handleGoogleLogin = async (e) => {
-    e.preventDefault();
+    // e.preventDefault();
 
     try {
       const result = await signInWithPopup(auth, provider);

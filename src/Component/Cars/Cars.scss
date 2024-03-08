@@ -64,27 +64,72 @@
     }
   }
 
-  .car-item {
-    width: 80%;
-    margin: auto;
+  .carsComp {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
 
-    .car {
-      background-color: #ddd;
-      width: fit-content;
-      padding: 1rem;
+    .car-item {
+      position: relative;
 
-      p.model {
-        margin-bottom: 0.5rem;
-        font-family: sans-serif;
-        font-weight: 600;
-      }
+      .car {
+        border: 1px solid #ddd;
+        background-color: #edecec;
+        border-radius: 1rem;
+        padding: 1rem;
+        margin-left: 1rem;
 
-      img {
-        width: 15rem;
-        height: 15rem;
-        object-fit: cover;
-        border: 1px solid #000;
-        margin-bottom: 1rem;
+        p {
+          font-size: 0.8rem;
+        }
+      
+        img {
+          width: 100%;
+          height: 20rem;
+          object-fit: cover;
+          background-color: #fff;
+          border-radius: 1rem;
+          margin-bottom: 0.5rem;
+        }
+
+        p.model {
+          margin-bottom: 0.5rem;
+        }
+
+        h3 {
+          margin-bottom: 0.5rem;
+        }
+
+        .price {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin-bottom: 1rem;
+
+          h5 {
+            color: #9d9b9b;
+          }
+        }
+
+        .capacity {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+
+          .item {
+            display: flex;
+            align-items: center;
+          }
+
+          button {
+            background-color: orangered;
+            color: #c3c3c3;
+            border: none;
+            padding: 0.5rem 0.5rem;
+            border-radius: 5px;
+            cursor: pointer;
+          }
+        }
       }
     }
   }

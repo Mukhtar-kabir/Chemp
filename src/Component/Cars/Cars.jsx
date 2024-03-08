@@ -1,9 +1,53 @@
 import "../Cars/Cars.scss";
+// import Card from "../Card/Card";
+import OwlCarousel from "react-owl-carousel";
+import "owl.carousel/dist/assets/owl.carousel.css";
+import "owl.carousel/dist/assets/owl.theme.default.css";
 import AccessTimeOutlinedIcon from "@mui/icons-material/AccessTimeOutlined";
 import BlurCircularOutlinedIcon from "@mui/icons-material/BlurCircularOutlined";
 import EvStationOutlinedIcon from "@mui/icons-material/EvStationOutlined";
 
+const options = {
+  items: 4,
+  loop: true,
+  autoplay: true,
+  nav: true,
+  dots: true,
+  navText: ["<", ">"]
+};
+
 const Cars = () => {
+  const carouselItems = [
+    {
+      title: "Mercedes E-Class",
+      price: '38500',
+      imageUrl: "/Mercedes/1.png",
+      parag: '2023',
+      rent: "10000"
+    },
+    {
+      title: "Mercedes E-Class",
+      price: '20500',
+      imageUrl: "/Mercedes/2.png",
+      parag: '2022',
+      rent: "12000"
+    },
+    {
+      title: "Mercedes E-Class",
+      price: '40500',
+      imageUrl: "/Mercedes/3.png",
+      parag: '2023',
+      rent: "15000"
+    },
+    {
+      title: "Mercedes E-Class",
+      price: '38500',
+      imageUrl: "/Mercedes/4.png",
+      parag: '2021',
+      rent: "10000"
+    },
+  ];
+
   return (
     <div className="cars">
       <h4>Best Services</h4>
@@ -18,8 +62,8 @@ const Cars = () => {
           </li>
           <li>
             <div className="item">
-              <img src="/Logos/audi.png" alt="" />
-              <span>Audi</span>
+              <img src="/Logos/toyota.png" alt="" />
+              <span>Toyota</span>
             </div>
           </li>
           <li>
@@ -30,47 +74,50 @@ const Cars = () => {
           </li>
           <li>
             <div className="item">
-              <img src="/Logos/toyota.png" alt="" />
-              <span>Toyota</span>
+              <img src="/Logos/honda.png" alt="" />
+              <span>Honda</span>
             </div>
           </li>
           <li>
             <div className="item">
-              <img src="/Logos/honda.png" alt="" />
-              <span>Honda</span>
+              <img src="/Logos/audi.png" alt="" />
+              <span>Audi</span>
             </div>
           </li>
         </ul>
       </div>
 
-      <div className="car-item">
-        <div className="car">
-          <img src="/Mercedes/1.png" alt="" />
-          <p className="model">2023</p>
-          <h3>2023 Mercedes-AMG GLS 63 </h3>
-          <div className="price">
-            <h3>$38500</h3>
-            <h5>$10000 month</h5>
-          </div>
-
-          <div className="capacity">
-            <div className="item">
-              <AccessTimeOutlinedIcon />
-              <span>30k</span>
+      <div className="carsComp">
+        <OwlCarousel options={options}>
+          {carouselItems.map((item, index) => (
+            <div className="car-item" key={index}>
+              <div className="car"> 
+                <img src={item.imageUrl} alt="" />
+                <p className="model">{item.parag}</p>
+                <h3>{item.title}</h3>
+                <div className="price">
+                  <h3>${item.price}</h3>
+                  <h5>${item.rent}</h5>
+                </div>
+                <div className="capacity">
+                  <div className="item">
+                    <AccessTimeOutlinedIcon />
+                    <span>30k</span>
+                  </div>
+                  <div className="item">
+                    <BlurCircularOutlinedIcon />
+                    <span>Auto</span>
+                  </div>
+                  <div className="item">
+                    <EvStationOutlinedIcon />
+                    <span>Diseel</span>
+                  </div>
+                  <button>Rent Now</button>
+                </div>
+              </div>
             </div>
-
-            <div className="item">
-              <BlurCircularOutlinedIcon />
-              <span>Auto</span>
-            </div>
-
-            <div className="item">
-              <EvStationOutlinedIcon />
-              <span>Diseel</span>
-            </div>
-            <button>Rent Now</button>
-          </div>
-        </div>
+          ))}
+        </OwlCarousel>
       </div>
     </div>
   );

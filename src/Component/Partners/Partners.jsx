@@ -1,4 +1,4 @@
-import "../Partners/Partners.scss";
+import "../Partners/partners.scss";
 
 const Partners = () => {
   const images = [
