@@ -1,5 +1,6 @@
 .services {
   padding: 100px 0;
+
   .services-container {
     width: 80%;
     margin: auto;
@@ -54,4 +55,22 @@
       }
     }
   }
+
+  @media (max-width: 900px) {
+    .services-container {
+      display: block;
+
+      .image {
+        img {
+          width: 100%;
+          margin-bottom: 2rem;
+        }
+      }
+
+      .desc {
+        margin-left: 0;
+      }
+    }
+  }
 }
+

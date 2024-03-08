@@ -133,4 +133,28 @@
       }
     }
   }
+
+  @media (max-width: 900px) {
+    h1 {
+      width: 100%;
+    }
+
+    .items {
+      ul {
+
+        li {
+          padding: 0.1;
+          font-size: 0.5rem;
+          margin-right: 1rem;
+
+          .item {
+            img {
+              width: 1rem;
+              height: 1rem;
+            }
+          }
+        }
+      }
+    }
+  }
 }
