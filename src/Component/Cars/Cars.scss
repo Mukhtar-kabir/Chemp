@@ -3,6 +3,7 @@
   width: 80%;
   margin: auto;
   font-family: sans-serif;
+  position: relative;
 
   h4,
   h1 {
@@ -65,12 +66,32 @@
   }
 
   .carsComp {
-    display: flex;
+    // display: flex;
     align-items: center;
     gap: 0.8rem;
 
     .car-item {
       position: relative;
+
+      // &::before,
+      // &::after {
+      //   content: "";
+      //   position: absolute;
+      //   top: 0;
+      //   // background: #000;
+      //   width: 80px;
+      //   height: 100%;
+      // }
+  
+      // &::before {
+      //   left: 0;
+      //   background: linear-gradient(90deg, #0000001c, transparent );
+      // }
+      
+      // &::after {
+      //   right: 0;
+      //   background: linear-gradient(-90deg, #0000001c, #fff );
+      // }
 
       .car {
         border: 1px solid #ddd;
@@ -85,7 +106,7 @@
       
         img {
           width: 100%;
-          height: 20rem;
+          height: 15rem;
           object-fit: cover;
           background-color: #fff;
           border-radius: 1rem;
@@ -135,11 +156,25 @@
   }
 
   @media (max-width: 900px) {
+    padding: 40px 0;
+    width: 90%;
+
+    h4 {
+      font-size: 0.9rem;
+    }
+
     h1 {
       width: 100%;
+      font-size: 1.5rem;
     }
 
     .items {
+      overflow-x: auto;  
+      white-space: nowrap;  
+      display: flex;
+      gap: 0.5rem;
+      width: 90%;
+
       ul {
 
         li {

@@ -1,5 +1,4 @@
 import "../Cars/Cars.scss";
-// import Card from "../Card/Card";
 import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
@@ -7,14 +6,24 @@ import AccessTimeOutlinedIcon from "@mui/icons-material/AccessTimeOutlined";
 import BlurCircularOutlinedIcon from "@mui/icons-material/BlurCircularOutlined";
 import EvStationOutlinedIcon from "@mui/icons-material/EvStationOutlined";
 
-const options = {
-  items: 4,
-  loop: true,
-  autoplay: true,
-  nav: true,
-  dots: true,
-  navText: ["<", ">"]
-};
+// const options = {
+//   loop: true,
+//   nav: false,
+//   dots: false,
+//   autoplay: true,
+//   responsive: {
+//     576: {
+//       items: 2
+//     },
+//     768: {
+//       items: 3
+//     },
+//     992: {
+//       items: 4
+//     }
+//   }
+// };
+
 
 const Cars = () => {
   const carouselItems = [
@@ -43,6 +52,13 @@ const Cars = () => {
       title: "Mercedes E-Class",
       price: '38500',
       imageUrl: "/Mercedes/4.png",
+      parag: '2021',
+      rent: "10000"
+    },
+    {
+      title: "Mercedes E-Class",
+      price: '38500',
+      imageUrl: "/Mercedes/5.png",
       parag: '2021',
       rent: "10000"
     },
@@ -88,7 +104,25 @@ const Cars = () => {
       </div>
 
       <div className="carsComp">
-        <OwlCarousel options={options}>
+        <OwlCarousel items={4}
+          loop={true}
+          autoplay={true}
+          nav={false}
+          dots={false}
+          responsive={{
+            0: {
+              items: 1
+            },
+            576: {
+              items: 2
+            },
+            768: {
+              items: 3
+            },
+            992: {
+              items: 3
+            }
+          }}>
           {carouselItems.map((item, index) => (
             <div className="car-item" key={index}>
               <div className="car"> 
